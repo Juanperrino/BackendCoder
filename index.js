@@ -14,9 +14,8 @@ class Usuario {
 
     getFullName() {
         return `
-            <b>Nombre:</b> ${this.nombre} <br />
-            <b>Apellido:</b> ${this.apellido} <br />
-            <hr />
+            Nombre: ${this.nombre}
+            Apellido: ${this.apellido}
         `;
     }
 
@@ -75,12 +74,16 @@ const usuario1 = new Usuario(
     'Juan',
     'Perrino',
     [{ name: "Harry Potter", author: "JK Rowling" }],
-    ["gato", "perro"]
+    ["gato", "perro", "pato"]
 );
 
-console.log(usuario1.getFullName())
+const countM = usuario1.countMascotas()
+console.log(countM)
+
 
 usuario1.getBookNames()
 
-const bookN = usuario1.getBookNames()
-console.log({ bookN })
+// const bookN = usuario1.getBookNames()
+// console.log({ bookN })
+
+console.log(usuario1.getFullName())
