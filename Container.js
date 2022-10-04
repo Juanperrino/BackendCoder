@@ -3,7 +3,7 @@ const fs = require('fs');
 
 class Container {
     constructor(fileName) {
-        this.filePath = `./data/${fileName}.json`
+        this.filePath = `./products.txt`;
     }
 
 
@@ -97,44 +97,6 @@ class Container {
             console.log(error);
         }
     }
-
-
-
 }
 
-
-
-//PRUEBAS
-
-
-const ProductContainer = new Container("productos");
-
-// ProductContainer.getAll()
-//     .then(data => console.log({ data }))
-//     .catch(error => console.log({ error }))
-
-
-// ProductContainer.save({
-//     title: "ProductNAME",
-//     price: 50,
-//     thumbnail: "https://imagenes.elpais.com/resizer/sjte0AMDbkud1dQRk2Lv5cUSzmA=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/XHFMGAP5PBG37FLDN5FIC4RMBQ.jpg"
-// })
-//     .then((data) => console.log({ data }))
-//     .catch((error) => console.log({ error }));
-
-
-// ProductContainer.getById(5)
-//     .then(data => console.log({ data }))
-//     .catch(error => console.log({ error }))
-
-
-// ProductContainer.deleteById(3).then((data) => console.log({ data }))
-
-// ProductContainer.deleteAll();
-
-
-
-// <!-- Did you know that 80% (eighty percent) of businesses that have an internet presence increase their sales by 50% (fifty percent) in the first year?
-// The creation of an online site is the first step. However, not everyone can make people's ideas come true,
-// the right team is required.
-// We are specialists in this field and we can develop many business ideas. -->
+module.exports = Container;
